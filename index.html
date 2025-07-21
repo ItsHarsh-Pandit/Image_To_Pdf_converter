@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image to PDF Converter</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1><i class="fas fa-file-pdf"></i> Image to PDF Converter</h1>
+            <p>Convert your images to PDF with ease</p>
+        </header>
+
+        <main>
+            <div class="upload-container" id="drop-area">
+                <div class="upload-icon">
+                    <i class="fas fa-cloud-upload-alt"></i>
+                </div>
+                <p class="upload-text">Drag & Drop images here</p>
+                <p class="upload-text">OR</p>
+                <label for="file-input" class="upload-button">Select Images</label>
+                <input type="file" id="file-input" multiple accept="image/*" hidden>
+            </div>
+
+            <div class="preview-container" id="preview-container">
+                <h2>Selected Images</h2>
+                <div class="image-preview" id="image-preview"></div>
+                <div class="buttons-container">
+                    <button id="convert-btn" class="action-button" disabled>
+                        <i class="fas fa-file-pdf"></i> Convert to PDF
+                    </button>
+                    <button id="clear-btn" class="action-button secondary" disabled>
+                        <i class="fas fa-trash"></i> Clear All
+                    </button>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <p>&copy; 2025 Image to PDF Converter | Created with <i class="fas fa-heart"></i></p>
+        </footer>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
